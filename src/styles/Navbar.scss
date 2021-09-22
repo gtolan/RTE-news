@@ -85,6 +85,35 @@ nav.headlines-categories {
     }
   }
 }
+section.navbar-menu {
+  transform-origin: top;
+  transition: 0.5s ease-in-out;
+  transform: scaleY(0);
+  visibility: hidden;
+  opacity: 0;
+  position: fixed;
+  ul {
+    background-color: white;
+    margin-top: 0;
+    list-style: none;
+    padding-left: 0;
+    text-align: left;
+    li {
+      padding: 6px 8px;
+      border-bottom: 1px solid #dbd9d4;
+      font-weight: 600;
+      font-size: 12px;
+      line-height: 15px;
+      text-transform: uppercase;
+    }
+  }
+  &.expanded {
+    animation-name: menuAnimation;
+    animation-duration: 0.4s;
+    animation-timing-function: linear;
+    animation-fill-mode: forwards;
+  }
+}
 
 @media only screen and (min-width: 640px) {
   nav {
@@ -200,4 +229,17 @@ nav.headlines-categories {
   bottom: 0;
   transform: rotate(-90deg);
   transition: bottom 0.075s ease, transform 0.075s 0.12s cubic-bezier(0.215, 0.61, 0.355, 1);
+}
+
+@keyframes menuAnimation {
+  0% {
+    transform: scaleY(0);
+    opacity: 0;
+    visibility: hidden;
+  }
+  100% {
+    transform: scaleY(1);
+    opacity: 1;
+    visibility: visible;
+  }
 }

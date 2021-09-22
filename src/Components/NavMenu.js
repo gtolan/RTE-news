@@ -1,20 +1,25 @@
+import '../styles/Navbar.scss';
+import { useContext } from 'react';
+import { GlobalContext } from '../GlobalState';
+
 
 const NavMenu = () => {
-    
+    const {menuCategories} = useContext(GlobalContext)
     const items = [1,2,4,5];
     const generateKey = () => {
         return Math.floor(Math.random() * 5000) + 1;
     }
 
+    if(menuCategories.length == 0) return null;
 
     return (
-        <div>
+        <section className="navbar-menu">
             <ul>
-                {items.map(item => {
-                    return (<li key={generateKey()}>yo yo{item}</li>)
+                {menuCategories.map(item => {
+                    return (<li key={generateKey()}>{item}</li>)
                 })}
             </ul>
-        </div>
+        </section>
     )
 }
 

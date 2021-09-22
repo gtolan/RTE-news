@@ -5,7 +5,7 @@ import Navbar from './Components/Navbar';
 import HeadlinesNavbar from './Components/HeadlinesNavbar';
 import NavMenu from './Components/NavMenu';
 import UserLogin from './Components/UserLogin';
-import Article from './Components/UserLogin';
+import ArticlePage from './Components/ArticlePage';
 import HomePage from './Components/HomePage';
 import About from './Components/About'
 import {
@@ -34,7 +34,7 @@ function App() {
                           <UserLogin />
                         </Route>
                         <Route path="/article/:title">
-                          <Article />
+                          <ArticlePage />
                         </Route>
                         <Route path="/" exact>
                           <HomePage />
