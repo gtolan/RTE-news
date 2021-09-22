@@ -25,10 +25,9 @@ const HeadlinesNavbar = () => {
     return (
         <nav className="headlines-categories">
             {headLines.map(({title}) => (
-                <Link to={`/articles/${title}`} onClick={openCategory(title)} key={generateKey()}>{title}</Link>
+                <Link className="headline-news-category" to={`/articles/${title}`} onClick={openCategory(title)} key={generateKey()}>{title}</Link>
              
             ))}
-            <h1>Headlines</h1>
         </nav>
     )
 }
