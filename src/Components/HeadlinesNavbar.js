@@ -4,9 +4,10 @@ import { Link } from 'react-router-dom'
 
 const HeadlinesNavbar = () => {
 
+    //TODO: remove to useState/memo to avoid re-renders
+    // const { headLines } = useContext(GlobalContext);
 
-    const { headLines } = useContext(GlobalContext);
-
+    const headLines = [1,2,3]
     useEffect(() => {
         console.log(headLines, 'headLines')
 
