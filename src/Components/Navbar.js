@@ -2,24 +2,17 @@ import rteLogo from '../images/rteLogo.png';
 import searchIcon from '../images/searchIcon.svg';
 import userIcon from '../images/userIcon.svg';
 import '../styles/Navbar.scss';
-import { useState } from 'react';
+
+// import { GlobalContext } from '../GlobalState';
 
 const Navbar = () => {
 
-    const [menuStatus, setToggleMenu] = useState(false); 
-    const toggleMenu = () => {
-        setToggleMenu(!menuStatus)
-    }
-    
-    const generateKey = () => {
-        return `${ new Date().getTime() }`;
-    }
     
     return (
         <nav>
             <div className="nav-left">
                 <button className="menu-btn" onClick={toggleMenu}>
-                    <div className={`hamburger hamburger--squeeze ${menuStatus ? 'is-active' : ''}`} type="button" data-testid='menu button mobile'>
+                    <div className={`hamburger hamburger--squeeze ${navMenuOpen ? 'is-active' : ''}`} type="button" data-testid='menu button mobile'>
                             <span className="hamburger-box">
                                 <span className="hamburger-inner"></span>
                             </span>

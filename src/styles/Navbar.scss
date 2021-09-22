@@ -86,17 +86,16 @@ nav.headlines-categories {
   }
 }
 section.navbar-menu {
-  display: none;
-  visibility: hidden;
+  transition-property: transform;
+  transform: scaleY(0);
   position: fixed;
   width: 100vw;
-  transition: 1s ease-in-out;
+  transition: 0.5s ease-in-out;
+  transform-origin: top;
   background-color: transparent;
   ul {
     transform-origin: top;
     transition: 0.5s ease-in-out;
-    transform: scaleY(0);
-    opacity: 0;
     background-color: white;
     margin-top: 0;
     list-style: none;
@@ -111,16 +110,19 @@ section.navbar-menu {
       text-transform: uppercase;
     }
     &.expanded {
-      animation-name: menuAnimation;
-      animation-duration: 0.4s;
-      animation-timing-function: linear;
-      animation-fill-mode: forwards;
-      visibility: visible;
+      display: block;
     }
   }
   &.expanded {
-    display: block;
-    visibility: visible;
+    height: auto;
+    transition: 0.5s ease-in-out;
+    transition-property: transform;
+    transform: scaleY(1);
+    // animation-name: menuAnimation;
+    // animation-duration: 0.4s;
+    // animation-timing-function: linear;
+    // animation-fill-mode: forwards;
+    // visibility: visible;
   }
 }
 

@@ -13,8 +13,8 @@ const NavMenu = () => {
     if(menuCategories.length == 0) return null;
 
     return (
-        <section className={`navbar-menu ${navMenuOpen ? '' : 'expanded'}`}>
-            <ul className={`${navMenuOpen ? '' : 'expanded'}`}>
+        <section className={`navbar-menu ${navMenuOpen ? 'expanded' : ''}`}>
+            <ul>
                 {menuCategories.map(item => {
                     return (<li key={generateKey()}>{item}</li>)
                 })}
