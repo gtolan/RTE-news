@@ -12,11 +12,11 @@ const HeadlinesNavbar = () => {
     }, [headLines])
 
     const generateKey = () => {
-        return `nav+${ new Date().getTime() }`;
+        return Math.floor(Math.random() * 5000) + 1;
     }
 
     const openCategory = () => {
-
+        console.log('open cat')
     }
     
     // const [headLines, setHeadLines] = useState([]);
@@ -24,10 +24,11 @@ const HeadlinesNavbar = () => {
 
     return (
         <nav className="headlines-categories">
-            {headLines.map(title => {
-                <Link to="/${title}" onClick={openCategory(title)} key={generateKey()}>{title}</Link>
-            })}
-            <h1>Headlines {headLines}</h1>
+            {headLines.map(({title}) => (
+                <Link to={`/articles/${title}`} onClick={openCategory(title)} key={generateKey()}>{title}</Link>
+             
+            ))}
+            <h1>Headlines</h1>
         </nav>
     )
 }

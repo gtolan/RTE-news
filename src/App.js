@@ -7,6 +7,7 @@ import NavMenu from './Components/NavMenu';
 import UserLogin from './Components/UserLogin';
 import Article from './Components/UserLogin';
 import HomePage from './Components/HomePage';
+import About from './Components/About'
 import {
   BrowserRouter as Router,
   Switch,
