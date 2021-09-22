@@ -4,7 +4,7 @@ import { GlobalContext } from '../GlobalState';
 
 
 const NavMenu = () => {
-    const {menuCategories} = useContext(GlobalContext)
+    const {menuCategories, navMenuOpen} = useContext(GlobalContext)
     const items = [1,2,4,5];
     const generateKey = () => {
         return Math.floor(Math.random() * 5000) + 1;
@@ -13,8 +13,8 @@ const NavMenu = () => {
     if(menuCategories.length == 0) return null;
 
     return (
-        <section className="navbar-menu">
-            <ul>
+        <section className={`navbar-menu ${navMenuOpen ? '' : 'expanded'}`}>
+            <ul className={`${navMenuOpen ? '' : 'expanded'}`}>
                 {menuCategories.map(item => {
                     return (<li key={generateKey()}>{item}</li>)
                 })}

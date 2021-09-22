@@ -4,7 +4,8 @@ export const GlobalContext = React.createContext();
 
 const initialState = {
                         headLines:[{title:'Corona'},{title:'Sport'}, {title:'Top Stories'}],
-                        menuCategories:['News', 'Sport', 'Entertainment', 'LifeStyle', 'Business', 'Culture', 'Player', 'TV', 'Radio']
+                        menuCategories:['News', 'Sport', 'Entertainment', 'LifeStyle', 'Business', 'Culture', 'Player', 'TV', 'Radio'],
+                        navMenuOpen:false
                      }
 
 export const GlobalProvider = ({children}) => {
