@@ -1,24 +1,23 @@
 import {  useReducer } from 'react';
 import NavbarReducer from  '../Components/NavbarReducer';   
-    
+
     
 const useNavbar = () => {
     
-    // const contextState = useContext(GlobalContext)
-    // const [menuStatus, setToggleMenu] = useState(false); 
-    // const {navMenuOpen} = contextState;
 
-    const [{navMenuOpen}, dispatch] = useReducer(NavbarReducer, {navMenuOpen:false});
+    const [{navMenuOpen, menuCategories, headLines}, dispatch] = 
+                    useReducer(NavbarReducer, {navMenuOpen:false, 
+                        headLines:[{title:'Corona'},{title:'Sport'}, {title:'Top Stories'}],
+                        menuCategories:['News', 'Sport', 'Entertainment', 'LifeStyle', 'Business', 'Culture', 'Player', 'TV', 'Radio']
+            });
 
-    const updateNav = () => {
-        dispatch({type:'toggleNavbar', payload:navMenuOpen})
-    }
+
     const toggleMenu = (e) => {
         e.preventDefault()
         console.log('tog menu f')
-            updateNav()
+        dispatch({type:'toggleNavbar', payload:navMenuOpen})
     }
-    return {toggleMenu}
+    return {toggleMenu, navMenuOpen, menuCategories, headLines}
 
 }
 export default useNavbar;

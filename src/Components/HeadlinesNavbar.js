@@ -4,8 +4,9 @@ import { Link } from 'react-router-dom'
 
 const HeadlinesNavbar = () => {
 
-    // const [navHeadLines, setNavHeadlines] = useState([])
+
     const { headLines } = useContext(GlobalContext);
+
     useEffect(() => {
         console.log(headLines, 'headLines')
 

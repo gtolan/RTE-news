@@ -1,7 +1,7 @@
 import logo from './logo.svg';
 import './App.css';
 import { GlobalProvider } from './GlobalState';
-import Navbar from './Components/Navbar';
+import NavbarControls from './Components/NavbarControls';
 import HeadlinesNavbar from './Components/HeadlinesNavbar';
 import NavMenu from './Components/NavMenu';
 import UserLogin from './Components/UserLogin';
@@ -13,6 +13,7 @@ import {
   Switch,
   Route
 } from "react-router-dom";
+import { NavbarProvider } from './NavbarState';
 
 function App() {
   return (
@@ -21,9 +22,10 @@ function App() {
         <GlobalProvider>
           
           <header>
-            <Navbar />
-            <HeadlinesNavbar />
-            <NavMenu/>
+                  <NavbarProvider>
+                      <NavbarControls />
+                  </NavbarProvider>
+      
            </header>
            <section>
                     <Switch>

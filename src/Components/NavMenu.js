@@ -1,11 +1,14 @@
 import '../styles/Navbar.scss';
+import useNavbar from './useNavbar'
 import { useContext } from 'react';
 import { GlobalContext } from '../GlobalState';
+import { NavbarContext }from '../NavbarState';
 
+const NavMenu = ({navMenuOpen}) => {
 
-const NavMenu = () => {
-    const {menuCategories, navMenuOpen} = useContext(GlobalContext)
-    const items = [1,2,4,5];
+    const {menuCategories} = useContext(NavbarContext);
+    
+    console.log('NM', menuCategories, navMenuOpen)
     const generateKey = () => {
         return Math.floor(Math.random() * 5000) + 1;
     }

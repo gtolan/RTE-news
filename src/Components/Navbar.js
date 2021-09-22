@@ -2,12 +2,12 @@ import rteLogo from '../images/rteLogo.png';
 import searchIcon from '../images/searchIcon.svg';
 import userIcon from '../images/userIcon.svg';
 import '../styles/Navbar.scss';
+import useNavbar from './useNavbar';
 
-// import { GlobalContext } from '../GlobalState';
 
-const Navbar = () => {
+const Navbar = ({toggleMenu, navMenuOpen}) => {
 
-    
+
     return (
         <nav>
             <div className="nav-left">
