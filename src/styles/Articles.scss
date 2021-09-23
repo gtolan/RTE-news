@@ -1,0 +1,47 @@
+.article-frame {
+  width: calc(100vw - 20px);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  margin-left: 10px;
+  background-color: white;
+}
+
+section.articles-with-images {
+  @extend .article-frame;
+  margin-top: 25px;
+}
+
+article {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  .card-image {
+    width: 100%;
+    img {
+      width: 100%;
+    }
+  }
+}
+
+.headline-article {
+  @extend .article-frame;
+  article {
+    .article-body {
+      padding: 8px;
+      font-size: 20px;
+      font-weight: 600;
+      line-height: 27px;
+      text-align: left;
+    }
+    &.without-images {
+      .article-body {
+        border-top: 1px black dashed;
+        font-size: 15px;
+        margin: 10px 0;
+      }
+    }
+  }
+}
