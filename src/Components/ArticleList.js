@@ -49,7 +49,7 @@ const ArticleList = () => {
 
     const HeadlineArticle = () => {
         return (
-                        <article>
+            <article>
                 <div className="card-image">
                     <img src={articlesWithImages[0].urlToImage} alt={articlesWithImages[0].title} />
                 </div>    
@@ -66,7 +66,9 @@ const ArticleList = () => {
         <>
         <div className="headline-article">
             <HeadlineArticle/>
-            <WithoutImages />
+            <div className="headline-shortcuts">
+                <WithoutImages />
+            </div>
         </div>
         <WithImages />
         

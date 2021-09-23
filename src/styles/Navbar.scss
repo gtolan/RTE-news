@@ -13,7 +13,7 @@
 nav {
   background-color: white;
   @extend .flex-row;
-  height: 42px;
+  height: auto;
   .nav-left {
     @extend .flex-row;
     width: 100px;
