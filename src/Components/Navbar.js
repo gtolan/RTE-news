@@ -8,7 +8,11 @@ import { useSelector } from  'react-redux';
 
 const Navbar = () => {
    
-    const navMenuOpen = useSelector(state => state.navbar.navMenuOpen);
+    const navMenuOpen = useSelector(state => {
+        console.log(state, 'state')
+        return state.navbar.navMenuOpen
+    });
+    
     console.log('Navbar rendered',navMenuOpen)
     const { toggleMenu } = useNavbar();
      return (

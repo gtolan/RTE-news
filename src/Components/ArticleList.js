@@ -3,20 +3,30 @@ import { useEffect } from 'react';
 import useArticles from './useArticles';
 
 const ArticleList = () => {
-    const articles = useSelector(state => state.articles)
-    const { fetchArticles } = useArticles()
+    
+    const { fetchArticles } = useArticles();
+    const articles = useSelector(state => {
+            console.log(state.art, "AT")
+        
+       return state.art.articlesWithImages});
 
     useEffect(() => {
+        console.log('use eff fetch')
         fetchArticles()
-    }, [articles])
+    }, [])
 
     if(articles.length === 0) return null;
-    
+
     return (
         <>
         {articles.map(article => (
             <article>
-                Welcome {article}
+                <div className="card-image">
+                    <img src={article.urlToImage} alt={article.title} />
+                </div>    
+                <div className="article-body">
+                    {article.title}
+                </div>
             </article>
         ))
         }

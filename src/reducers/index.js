@@ -1,10 +1,10 @@
-import navbarReducer from './navbarReducer';
-import articlesReducer from './articleReducers';
 import { combineReducers } from 'redux';
+import navbarReducer from './navbarReducer';
+import articleReducer from './articleReducer';
 
-const rootReducer = () => {
-    combineReducers({navbar:navbarReducer, articles:articlesReducer})
-}
 
-export default rootReducer;
+export default combineReducers({
+        navbar: navbarReducer, 
+        art: articleReducer})
+
 

@@ -20,13 +20,13 @@ const newsConfig = {
 const navbarReducer = (state = newsConfig, action) => {
     console.log('NR')
     switch(action.type) {
-        case 'toggleNavbar':{
+        case 'toggleNavbar':
             console.log('TOGGLE NAVBAR', state, 'state', action.payload)
             return {
                 ...state,
                 navMenuOpen:!state.navMenuOpen
             }
-        }
+        
         default:
             return state;
         

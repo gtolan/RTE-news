@@ -1,22 +1,21 @@
 import './App.css';
 
+import Navbar from './Components/Navbar';
 import HeadlinesNavbar from './Components/HeadlinesNavbar';
 import NavMenu from './Components/NavMenu';
-import Navbar from './Components/Navbar';
-import navbarReducer from './reducers/navbarReducer';
-import UserLogin from './Components/UserLogin';
+
 import ArticlePage from './Components/ArticlePage';
 import HomePage from './Components/HomePage';
+
 import About from './Components/About';
+import UserLogin from './Components/UserLogin';
 import { Provider } from 'react-redux';
-import { createStore } from 'redux';
-// import { NavbarProvider } from './NavbarState';
 import {
   BrowserRouter as Router,
   Switch,
   Route
 } from "react-router-dom";
-const store = createStore(navbarReducer);
+import store from './store';
 
 
 
