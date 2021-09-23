@@ -3,11 +3,11 @@
 const useNavbar = () => {
     
     const dispatch = useDispatch();
-    const navMenuOpen = useSelector(state => state.navMenuOpen)
+    const navMenuOpen = useSelector(state => state.navbar.navMenuOpen)
 
     const toggleMenu = (e) => {
         e.preventDefault()
-        console.log('tog menu f')
+        console.log('tog menu f', dispatch,navMenuOpen)
         dispatch({type:'toggleNavbar', payload:navMenuOpen})
     }
     return { toggleMenu }

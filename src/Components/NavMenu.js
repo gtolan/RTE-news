@@ -3,8 +3,8 @@ import { useSelector } from 'react-redux';
 
 const NavMenu = () => {
 
-    const menuCategories = useSelector(state => state.menuCategories);
-    const navMenuOpen = useSelector(state => state.navMenuOpen);
+    const menuCategories = useSelector(state => state.navbar.menuCategories);
+    const navMenuOpen = useSelector(state => state.navbar.navMenuOpen);
     
     const generateKey = () => {
         return Math.floor(Math.random() * 5000) + 1;

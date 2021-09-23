@@ -1,12 +1,12 @@
 import React from 'react'
-import Article from './Article'
+import ArticleList from './ArticleList'
 
 const HomePage = () => {
     return (
         <div>
-                <Article />
+                <ArticleList />
         </div>
     )
 }
 
-export default HomePage
+export default HomePage;
