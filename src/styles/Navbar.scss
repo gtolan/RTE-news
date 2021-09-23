@@ -1,3 +1,7 @@
+.main-body.page-opacity {
+  opacity: 0.4;
+}
+
 .flex-row {
   display: flex;
   justify-content: center;
@@ -65,10 +69,10 @@ nav {
 
 nav.headlines-categories {
   @extend .flex-row;
+
   background-color: #eeecec;
   justify-content: space-evenly;
-  max-width: calc(80% - 20px);
-  margin-left: 10%;
+  max-width: 100%;
   padding: 10px;
   flex-wrap: wrap;
   a.headline-news-category {
@@ -118,6 +122,7 @@ section.navbar-menu {
   }
   &.expanded {
     height: auto;
+    z-index: 6;
     transition: 0.5s ease-in-out;
     transition-property: transform;
     transform: scaleY(1);
@@ -140,6 +145,10 @@ section.navbar-menu {
       .tablet-menu {
         display: block;
         transition: 0.3s ease-in;
+        margin-top: 2px;
+        background-color: transparent;
+        outline: none;
+        border: none;
       }
     }
   }

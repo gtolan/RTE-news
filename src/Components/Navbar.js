@@ -43,13 +43,13 @@ const Navbar = () => {
                     <img src={userIcon} alt='user icon button' className='search-icon' />
                 </button>
 
-                <div className="tablet-menu">
-                    <button className="hamburger hamburger--squeeze" type="button">
-                    <span className="hamburger-box">
-                        <span className="hamburger-inner"></span>
-                    </span>
-                    </button>
-                </div>
+                <button className="tablet-menu menu-btn" onClick={toggleMenu}>
+                    <div className={`hamburger hamburger--squeeze ${navMenuOpen ? 'is-active' : ''}`} type="button" data-testid='menu button mobile'>
+                            <span className="hamburger-box">
+                                <span className="hamburger-inner"></span>
+                            </span>
+                    </div>
+                </button>  
             </div>
         </nav>
     )

@@ -9,6 +9,7 @@ import HomePage from './Components/HomePage';
 
 import About from './Components/About';
 import UserLogin from './Components/UserLogin';
+import Footer from './Components/Footer';
 import { Provider } from 'react-redux';
 import {
   BrowserRouter as Router,
@@ -21,6 +22,9 @@ import store from './store';
 
 
 function App() {
+
+  
+
   return (
     <div className="App">
       <Router>
@@ -31,7 +35,8 @@ function App() {
                   <HeadlinesNavbar />
                   <NavMenu />
             </header>
-            <section>
+            
+            <main  >
                     <Switch>
                         <Route path="/about">
                           <About />
@@ -46,7 +51,10 @@ function App() {
                           <HomePage />
                         </Route>
                     </Switch>
-            </section>
+            </main>
+            <footer>
+                  <Footer />
+            </footer>
          
         </Provider>
       </Router>
