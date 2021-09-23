@@ -4,22 +4,29 @@ import { GlobalProvider } from './GlobalState';
 import NavbarControls from './Components/NavbarControls';
 import HeadlinesNavbar from './Components/HeadlinesNavbar';
 import NavMenu from './Components/NavMenu';
+import appReducer from './store';
 import UserLogin from './Components/UserLogin';
 import ArticlePage from './Components/ArticlePage';
 import HomePage from './Components/HomePage';
-import About from './Components/About'
+import About from './Components/About';
+import { Provider } from 'react-redux';
+import { createStore } from 'redux';
+import { NavbarProvider } from './NavbarState';
 import {
   BrowserRouter as Router,
   Switch,
   Route
 } from "react-router-dom";
-import { NavbarProvider } from './NavbarState';
+const store = createStore(appReducer);
+
+
+
 
 function App() {
   return (
     <div className="App">
       <Router>
-        <GlobalProvider>
+        <Provider store={store}>
           
           <header>
                   <NavbarProvider>
@@ -44,7 +51,7 @@ function App() {
                     </Switch>
             </section>
          
-        </GlobalProvider>
+        </Provider>
       </Router>
     </div>
   );

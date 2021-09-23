@@ -3,10 +3,11 @@ import searchIcon from '../images/searchIcon.svg';
 import userIcon from '../images/userIcon.svg';
 import '../styles/Navbar.scss';
 import useNavbar from './useNavbar';
+import { useSelector } from  'react-redux';
 
 
-const Navbar = ({toggleMenu, navMenuOpen}) => {
-
+const Navbar = ({toggleMenu}) => {
+    const navMenuOpen = useSelector(state => state.navMenuOpen)
 
     return (
         <nav>
