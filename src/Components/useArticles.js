@@ -11,15 +11,15 @@ const useArticles = () => {
         // const response = await fetch(url);
         // const { articles } = await response.json();
         const articles = news;
-        const noImages = [];
+        const noImages = [], hasImages = [];
         console.log(articles)
         console.log(JSON.stringify(articles))
         const articleSort = (art) => {
             return (art.urlToImage ? 
-            art : (noImages.push(art)))
+            (hasImages.push(art)) : (noImages.push(art)))
         }
-        const hasImages = articles.filter(articleSort)
-console.log(noImages,hasImages)
+        articles.map(articleSort);
+        console.log(noImages,hasImages)
         dispatch({type:'addArticlesWithImages', payload:hasImages})
         dispatch({type:'addArticlesWithoutImages', payload:noImages})
     }
