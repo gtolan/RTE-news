@@ -1,9 +1,16 @@
 
 const Footer = () => {
     return (
-        <div>
-            Foot n Mouth
-        </div>
+        <>
+            <div className="top">
+
+            </div>
+            <div className="bottom">
+                <p className="copyright">
+                    RTE is a terrible example of a website
+                </p>
+            </div>
+        </>
     )
 }
 

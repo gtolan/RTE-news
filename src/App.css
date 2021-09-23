@@ -12,3 +12,36 @@ header {
 main {
   margin-top: 92px;
 }
+
+footer {
+  min-height: 300px;
+  margin-top: 3rem;
+  background-color: white;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+}
+
+footer .bottom {
+  width: 100%;
+  background-color: grey;
+  color: white;
+}
+footer .bottom > .copyright {
+  height: 60px;
+  width: 100%;
+  margin-top: 16px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0;
+}
+footer .top {
+  height: 234px;
+  width: 100%;
+  display: flex;
+  padding: 5px;
+  align-items: center;
+  justify-content: center;
+}
