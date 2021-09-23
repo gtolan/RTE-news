@@ -11,12 +11,15 @@ import About from './Components/About';
 import UserLogin from './Components/UserLogin';
 import Footer from './Components/Footer';
 import { Provider } from 'react-redux';
+import ScrollToTop from './Components/scrollToTop';
+
 import {
   BrowserRouter as Router,
   Switch,
   Route
 } from "react-router-dom";
 import store from './store';
+
 
 
 
@@ -37,6 +40,7 @@ function App() {
             </header>
             
             <main  >
+              <ScrollToTop />
                     <Switch>
                         <Route path="/about">
                           <About />

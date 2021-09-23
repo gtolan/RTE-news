@@ -4,7 +4,7 @@ import userIcon from '../images/userIcon.svg';
 import '../styles/Navbar.scss';
 import useNavbar from './useNavbar';
 import { useSelector } from  'react-redux';
-
+import { Link } from 'react-router-dom';
 
 const Navbar = () => {
    
@@ -30,9 +30,9 @@ const Navbar = () => {
                 </button>  
             </div>
 
-            <div className="nav-middle">
+            <Link to='/' className="nav-middle">
                 <img src={rteLogo} alt='rte navbar logo' className='rte-nav-logo' />
-            </div>
+            </Link>
 
             <div className="nav-right">
                 <button className="search-nav-icon">

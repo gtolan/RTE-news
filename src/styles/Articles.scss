@@ -1,3 +1,4 @@
+///ArticleList
 .article-frame {
   width: calc(100vw - 20px);
   display: flex;
@@ -20,12 +21,15 @@ section.articles-with-images {
   @extend .article-frame;
   margin-top: 25px;
   background-color: transparent;
-  article {
-    margin-bottom: 10px;
-    .article-body {
-      text-align: left;
-      padding-left: 10px;
-      padding-bottom: 10px;
+  .article-link {
+    width: 100%;
+    article {
+      margin-bottom: 10px;
+      .article-body {
+        text-align: left;
+        padding-left: 10px;
+        padding-bottom: 10px;
+      }
     }
   }
 }
@@ -79,72 +83,81 @@ article {
     flex-direction: row;
 
     flex-wrap: wrap;
-    article {
+    .article-link {
       width: calc(50% - 9px);
-      overflow: hidden;
-      margin-bottom: 10px;
-      margin: 0px 5px 5px 4px;
-      border-bottom: 1px solid grey;
-      .card-image {
-        background-color: white;
-        display: flex;
-        justify-content: center;
-        align-items: flex-start;
-        height: 130px;
+      article {
+        //
+        overflow: hidden;
+        margin-bottom: 10px;
+        margin: 0px 5px 5px 4px;
+        border-bottom: 1px solid grey;
+        .card-image {
+          background-color: white;
+          display: flex;
+          justify-content: center;
+          align-items: flex-start;
+          height: 160px;
 
-        img {
-          min-height: 130px;
-          max-width: 50vw;
-          max-height: 130px;
-          width: 100%;
+          img {
+            min-height: 160px;
+            max-width: 50vw;
+            max-height: 160px;
+            width: 100%;
+          }
         }
-      }
-      .article-body {
-        text-align: left;
-        padding-left: 10px;
-        padding-bottom: 10px;
-        min-height: 72px;
-        padding-top: 10px;
+        .article-body {
+          text-align: left;
+          padding-left: 10px;
+          padding-bottom: 10px;
+          min-height: 72px;
+          padding-top: 10px;
+        }
       }
     }
   }
 }
 
 @media screen and (min-width: 550px) {
-  section.articles-with-images article .card-image {
-    width: 100%;
-    min-height: 130px;
-    max-width: 50vw;
-    max-height: auto;
-    overflow: hidden;
-    img {
-      width: 100%;
-      min-height: 130px;
-      max-width: 50vw;
-      max-height: none;
-    }
-  }
-  .headline-article {
-    max-width: 700px;
-    margin: auto;
-  }
-}
-
-@media screen and (min-width: 720px) {
-  section.articles-with-images article {
+  section.articles-with-images article .article-link {
     width: calc(33% - 9px);
     .card-image {
       width: 100%;
       min-height: 130px;
-      max-width: 33vw;
+      max-width: 50vw;
       max-height: auto;
-      justify-content: center;
       overflow: hidden;
       img {
         width: 100%;
         min-height: 130px;
         max-width: 50vw;
         max-height: none;
+      }
+    }
+    .headline-article {
+      max-width: 700px;
+      margin: auto;
+    }
+  }
+}
+
+@media screen and (min-width: 720px) {
+  section.articles-with-images article {
+    .article-link {
+      width: calc(33% - 9px);
+      .card-image {
+        width: 100%;
+        max-width: 33vw;
+        max-height: auto;
+        justify-content: center;
+        align-items: center;
+        overflow: hidden;
+        min-height: 160px;
+        img {
+          width: 100%;
+          min-height: 130px;
+          max-width: 50vw;
+          max-height: none;
+        }
       }
     }
   }
@@ -183,4 +196,52 @@ article {
       }
     }
   }
+}
+
+///ArticlePage
+
+.article-page {
+  background-color: white;
+  padding-top: 1px;
+  padding-bottom: 7rem;
+  .article-image {
+    max-width: 800px;
+    width: 95%;
+    margin: auto;
+    img {
+      width: 100%;
+    }
+  }
+  .article-title {
+    max-width: 800px;
+    width: 95%;
+    margin: auto;
+    text-align: left;
+    margin-top: 1rem;
+
+    h4 {
+      font-size: 30px;
+      margin: 24px 0px;
+      font-weight: 600;
+      letter-spacing: 1px;
+      line-height: 2.5rem;
+    }
+  }
+  .article-content {
+    width: 95%;
+    text-align: left;
+    margin: 1rem auto;
+  }
+}
+
+.article-link {
+  cursor: pointer;
+  text-decoration: none;
+  outline: none;
+  color: black;
+  display: inline-block;
+  width: calc(50% - 10px);
+  overflow: hidden;
+  margin-bottom: 10px;
+  margin: 0px 5px 5px 4px;
 }
