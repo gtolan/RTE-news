@@ -11,6 +11,7 @@
 section.articles-with-images {
   @extend .article-frame;
   margin-top: 25px;
+  background-color: transparent;
 }
 
 article {
@@ -18,7 +19,8 @@ article {
   justify-content: center;
   align-items: center;
   flex-direction: column;
-  background-color: white;
+  //   background-color: white;
+  background-color: transparent;
   .card-image {
     width: 100%;
     img {
