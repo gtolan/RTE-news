@@ -118,35 +118,39 @@ article {
 }
 
 @media screen and (min-width: 550px) {
-  section.articles-with-images article .article-link {
-    width: calc(33% - 9px);
-    .card-image {
-      width: 100%;
-      min-height: 130px;
-      max-width: 50vw;
-      max-height: auto;
-      overflow: hidden;
-      img {
-        width: 100%;
-        min-height: 130px;
-        max-width: 50vw;
-        max-height: none;
+  .headline-article {
+    max-width: 700px;
+    margin: auto;
+  }
+  section.articles-with-images {
+    .article-link {
+      width: calc(33% - 9px);
+      article {
+        .card-image {
+          width: 100%;
+          min-height: 130px;
+          max-width: 50vw;
+          max-height: auto;
+          overflow: hidden;
+          img {
+            width: 100%;
+            min-height: 130px;
+            max-width: 50vw;
+            max-height: none;
+          }
+        }
       }
-    }
-    .headline-article {
-      max-width: 700px;
-      margin: auto;
     }
   }
 }
 
 @media screen and (min-width: 720px) {
-  section.articles-with-images article {
-    .article-link {
-      width: calc(33% - 9px);
+  section.articles-with-images .article-link {
+    width: calc(33% - 9px);
+    article {
       .card-image {
         width: 100%;
-        max-width: 33vw;
+        // max-width: 33vw;
         max-height: auto;
         justify-content: center;
         align-items: center;
@@ -180,19 +184,20 @@ article {
 }
 
 @media screen and (min-width: 900px) {
-  section.articles-with-images article {
+  section.articles-with-images .article-link {
     width: calc(25% - 9px);
-    .card-image {
-      width: 100%;
-      min-height: 130px;
-      max-width: 33vw;
-      max-height: auto;
-      overflow: hidden;
-      img {
+    article {
+      .card-image {
         width: 100%;
         min-height: 130px;
-        max-width: 50vw;
-        max-height: none;
+        max-height: auto;
+        overflow: hidden;
+        img {
+          width: 100%;
+          min-height: 160px;
+          height: auto;
+          max-height: none;
+        }
       }
     }
   }
