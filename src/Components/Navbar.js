@@ -6,10 +6,11 @@ import useNavbar from './useNavbar';
 import { useSelector } from  'react-redux';
 
 
-const Navbar = ({toggleMenu}) => {
+const Navbar = () => {
+    console.log('Navbar rendered')
     const navMenuOpen = useSelector(state => state.navMenuOpen)
-
-    return (
+    const { toggleMenu } = useNavbar();
+     return (
         <nav>
             <div className="nav-left">
                 <button className="menu-btn" onClick={toggleMenu}>

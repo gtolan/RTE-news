@@ -1,14 +1,11 @@
 import '../styles/Navbar.scss';
-import useNavbar from './useNavbar'
-import { useContext } from 'react';
-import { GlobalContext } from '../GlobalState';
-import { NavbarContext }from '../NavbarState';
+import { useSelector } from 'react-redux';
 
-const NavMenu = ({navMenuOpen}) => {
+const NavMenu = () => {
 
-    const {menuCategories} = useContext(NavbarContext);
+    const menuCategories = useSelector(state => state.menuCategories);
+    const navMenuOpen = useSelector(state => state.navMenuOpen);
     
-    console.log('NM', menuCategories, navMenuOpen)
     const generateKey = () => {
         return Math.floor(Math.random() * 5000) + 1;
     }

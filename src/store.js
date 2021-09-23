@@ -10,6 +10,7 @@ const newsConfig = {
 const appReducer = (state = newsConfig, action) => {
     switch (action.type){
         case 'TOGGLE NAVBAR' :{
+            console.log('TOGGLE NAVBAR')
             return {
                 ...state,
                 navbarOpen:!state.navbarOpen
