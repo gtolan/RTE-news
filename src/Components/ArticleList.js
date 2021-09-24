@@ -1,12 +1,12 @@
 import { useSelector } from 'react-redux';
-import { useEffect } from 'react';
+import React,{ useEffect } from 'react';
 import useArticles from './useArticles';
 import '../styles/Articles.scss';
 import { Link } from 'react-router-dom';
 
 
 
-const ArticleList = () => {
+const ArticleList = React.memo(() => {
     
     const { fetchArticles } = useArticles();
     const articlesWithImages = useSelector(state => state.art.articlesWithImages);
@@ -91,6 +91,6 @@ const ArticleList = () => {
         
         </>
     )
-}
+})
 
 export default ArticleList;

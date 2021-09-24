@@ -1,5 +1,7 @@
+import React from 'react';
 
-const Footer = () => {
+
+const Footer = React.memo(() => {
     return (
         <>
             <div className="top">
@@ -12,6 +14,6 @@ const Footer = () => {
             </div>
         </>
     )
-}
+})
 
 export default Footer
